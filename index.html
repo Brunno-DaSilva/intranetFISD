@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Main CSS -->
-    <link rel="stylesheet" href="./main.css" />
 
-    <!--FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Main CSS -->
+  <link rel="stylesheet" href="./main.css" />
 
-    <title>FISD Intranet</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__wrapper">
-        <div class="header__logo">
-          <a href="./index.html"
-            ><img src="./img/fisd-logo-white-rgb.svg" alt=""
-          /></a>
-        </div>
-        <nav class="header__menu">
-          <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="#">STAFF</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="./ABOUT.html">ABOUT</a></li>
-          </ul>
-        </nav>
+  <!--FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+
+  <title>FISD Intranet</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="./index.html"><img src="./img/fisd-logo-white-rgb.svg" alt="" /></a>
       </div>
-    </header>
-    <section class="banner">
-      <div class="banner__wrapper">
-        <!-- Banner left colunm  -->
-        <div class="banner__col-left">
-          <div id="banner__highlight_img" class="banner__highlight bg-img">
+      <nav class="header__menu">
+        <ul>
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li><a href="#">STAFF</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="./ABOUT.html">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="banner">
+    <div class="banner__wrapper">
+      <!-- Banner left colunm  -->
+      <div class="banner__col-left">
+        <div id="banner__highlight_img" class="banner__highlight bg-img">
+          <div class="overlay"></div>
+          <div class="banner__text">
+            <h2>Highlight Section</h2>
+            <p>
+              More about the article
+              <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner right colunm  -->
+      <div class="banner__col-right">
+        <div id="banner__alert_one_img" class="banner_alert-one bg-img">
+          <div class="categories__item set-bg" data-setbg="img/categories/category-2.jpg"
+            style="background-image: url('img/categories/category-2.jpg')">
             <div class="overlay"></div>
+
             <div class="banner__text">
-              <h2>Highlight Section</h2>
+              <h4>Alert Section One</h4>
               <p>
                 More about the article
                 <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
@@ -50,46 +63,134 @@
             </div>
           </div>
         </div>
+        <div id="banner__alert_two_img" class="banner_alert-two bg-img">
+          <div class="categories__item set-bg" data-setbg="img/categories/category-3.jpg"
+            style="background-image: url('img/categories/category-3.jpg')">
+            <div class="overlay"></div>
 
-        <!-- Banner right colunm  -->
-        <div class="banner__col-right">
-          <div id="banner__alert_one_img" class="banner_alert-one bg-img">
-            <div
-              class="categories__item set-bg"
-              data-setbg="img/categories/category-2.jpg"
-              style="background-image: url('img/categories/category-2.jpg')"
-            >
-              <div class="overlay"></div>
-
-              <div class="banner__text">
-                <h4>Alert Section One</h4>
-                <p>
-                  More about the article
-                  <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="banner__alert_two_img" class="banner_alert-two bg-img">
-            <div
-              class="categories__item set-bg"
-              data-setbg="img/categories/category-3.jpg"
-              style="background-image: url('img/categories/category-3.jpg')"
-            >
-              <div class="overlay"></div>
-
-              <div class="banner__text">
-                <h4>Alert Two Section</h4>
-                <p>
-                  More about the article
-                  <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
-                </p>
-              </div>
+            <div class="banner__text">
+              <h4>Alert Two Section</h4>
+              <p>
+                More about the article
+                <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <script src="./app.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <section class="qlinks">
+    <div class="qlinks__wrapper">
+      <div class="qlinks__title">
+        <h1>QUICK LINKS</h1>
+      </div>
+      <div class="qlinks__links">
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+        <div class="qlinks__links-item">
+          <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apple" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="14" r="7" />
+              <path d="M12 11v-6a2 2 0 0 1 2 -2h2v1a2 2 0 0 1 -2 2h-2" />
+              <path d="M10 10.5c1.333 .667 2.667 .667 4 0" />
+            </svg> QUICK LINK</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./app.js"></script>
+</body>
+
 </html>

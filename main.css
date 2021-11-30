@@ -58,7 +58,11 @@ body {
   width: 150px;
   height: auto;
 }
-
+/* 
+==========================================================================
+  Highlight Section 
+========================================================================== 
+*/
 .banner {
 }
 
@@ -122,12 +126,12 @@ body {
 }
 
 .banner__text h2 {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1.8rem;
   color: var(--OffWhite);
 }
 .banner__text h4 {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1.4rem;
   color: var(--OffWhite);
 }
@@ -155,4 +159,13 @@ body {
   background-color: #072136;
   opacity: 0.7;
   z-index: 1;
+}
+
+/* 
+==========================================================================
+  QUICK LINK Section 
+========================================================================== 
+*/
+
+.qlinks {
 }
