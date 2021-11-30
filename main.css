@@ -167,22 +167,21 @@ body {
 ========================================================================== 
 */
 .qlinks {
-  border: 1px solid red;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f3f3f3;
+  margin-bottom: 1.5rem;
 }
 .qlinks__wrapper {
   width: 85%;
-  border: 1px solid green;
   display: grid;
   grid-template-columns: 12fr;
 }
 
 .qlinks__title {
-  margin: 2rem 0;
-  border: 1px solid blue;
+  margin: 1.5rem 0;
 }
 .qlinks__title h2 {
   font-size: 1.2rem;
@@ -192,13 +191,11 @@ body {
 .qlinks__links {
   display: grid;
   grid-template-columns: 1fr 1fr 1.1fr 1.1fr 1.1fr;
-  border: 1px solid purple;
 }
 .qlinks__links-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid pink;
   transition: ease-in-out 0.4s;
 }
 .qlinks__links-item:hover {
