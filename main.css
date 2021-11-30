@@ -166,6 +166,37 @@ body {
   QUICK LINK Section 
 ========================================================================== 
 */
-
 .qlinks {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qlinks__wrapper {
+  width: 85%;
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: 12fr;
+}
+
+.qlinks__title {
+  margin: 2rem 0;
+  border: 1px solid blue;
+}
+.qlinks__title h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.qlinks__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr 1.1fr 1.1fr;
+  border: 1px solid purple;
+}
+.qlinks__links-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
 }
