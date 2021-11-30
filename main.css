@@ -185,7 +185,7 @@ body {
   border: 1px solid blue;
 }
 .qlinks__title h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 }
 
@@ -199,4 +199,14 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid pink;
+  transition: ease-in-out 0.4s;
+}
+.qlinks__links-item:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+.qlinks__links-item p {
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
 }
