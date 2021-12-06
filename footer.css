@@ -186,3 +186,7 @@ body .animation__underline:hover:after {
   width: 100%;
   left: 0;
 }
+
+#svg__footer {
+  margin-bottom: -8.1rem;
+}
