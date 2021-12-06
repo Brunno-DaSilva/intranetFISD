@@ -210,3 +210,55 @@ body {
   cursor: pointer;
   color: var(--yellow);
 }
+
+/* 
+==========================================================================
+  Calendar Section 
+========================================================================== 
+*/
+
+.calendar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+.calendar__wrapper {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 12fr;
+  margin-bottom: 3rem;
+}
+
+.calendar__title {
+  margin: 1.5rem 0;
+}
+
+.calendar__title h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #626874;
+}
+.calendar__sub_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar__sub_title h3 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #626874;
+  text-transform: uppercase;
+  transition: ease-in-out 0.4s;
+}
+
+.calendar__sub_title h3:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+.calendar__sub_title svg {
+  transform: rotate(90deg);
+  color: var(--light-blue) !important;
+}
