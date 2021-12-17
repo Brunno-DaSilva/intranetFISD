@@ -262,3 +262,17 @@ body {
   transform: rotate(90deg);
   color: var(--light-blue) !important;
 }
+/* 
+========================
+  Calendar Cards
+========================
+*/
+
+.calendar__date {
+  border: 1px solid red;
+  min-height: 30vh;
+}
+
+.calendar__date-card {
+  border: 1px solid var(--dark-blue);
+}
