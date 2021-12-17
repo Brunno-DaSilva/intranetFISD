@@ -270,7 +270,6 @@ body {
 */
 
 .calendar__date {
-  border: 1px solid red;
   min-height: 30vh;
   padding: 0.5rem;
   display: grid;
@@ -357,3 +356,9 @@ body {
   color: var(--yellow);
   cursor: pointer;
 }
+
+/* 
+==========================================================================
+  Weekly Caption Section 
+========================================================================== 
+*/
