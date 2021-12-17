@@ -357,8 +357,41 @@ body {
   cursor: pointer;
 }
 
+.svg__calendar {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -5px;
+}
+
 /* 
 ==========================================================================
   Weekly Caption Section 
 ========================================================================== 
 */
+.caption {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d2dfe9;
+  min-height: 60vh;
+}
+.caption__wrapper {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 12fr;
+  margin-bottom: 3rem;
+}
+
+.caption__title {
+  margin: 1.5rem 0;
+}
+.caption__title h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #072136 !important;
+}
+
+.svg__caption {
+  margin-bottom: -5px;
+}
