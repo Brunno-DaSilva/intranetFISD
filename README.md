@@ -14,4 +14,4 @@
 ### Mockup
 
 - Figma link:  
-  [https://www.figma.com/file/4tO32dCZRwAfb2fSpBFrWe/Ferrari-Superfast-813-by-arshakir?node-id=0%3A1](https://www.figma.com/file/4tO32dCZRwAfb2fSpBFrWe/Ferrari-Superfast-813-by-arshakir?node-id=0%3A1)
+  [https://www.figma.com](https://www.figma.com/file/4tO32dCZRwAfb2fSpBFrWe/FriscoISDIntranet?node-id=0%3A1)
