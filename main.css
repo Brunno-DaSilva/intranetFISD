@@ -8,6 +8,7 @@
   --yellow: #e8b20f;
   --orange: #e95b37;
   --OffWhite: #f8f8f8;
+  --transition: ease-in-out 0.4s;
 }
 
 *,
@@ -139,8 +140,8 @@ body {
   font-size: 1rem;
   color: var(--OffWhite);
   letter-spacing: 1px;
-  -webkit-transition: ease-in-out 0.4s;
-  transition: ease-in-out 0.4s;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 .banner__text p:hover {
   cursor: pointer;
@@ -204,7 +205,7 @@ body {
   font-size: 0.9rem;
   margin-left: 0.2rem;
   color: #626874;
-  transition: ease-in-out 0.4s;
+  transition: var(--transition);
 }
 .qlinks__links-item p:hover {
   cursor: pointer;
@@ -251,7 +252,7 @@ body {
   letter-spacing: 1px;
   color: #626874;
   text-transform: uppercase;
-  transition: ease-in-out 0.4s;
+  transition: var(--transition);
 }
 
 .calendar__sub_title h3:hover {
@@ -271,8 +272,85 @@ body {
 .calendar__date {
   border: 1px solid red;
   min-height: 30vh;
+  padding: 0.5rem;
 }
 
 .calendar__date-card {
-  border: 1px solid var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 420px;
+  height: 241px;
+  left: 112px;
+  top: 135px;
+  background: #f3f3f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.calendar__date-card .calendar__date-card_left_side {
+  background-color: var(--dark-blue);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.calendar__date-card .calendar__date-card_left_side p {
+  color: var(--OffWhite);
+  font-size: 30px;
+  font-style: normal;
+}
+
+.calendar__date-card_right_side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.calendar__date-card .calendar__date-card_description {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  flex: auto;
+}
+.calendar__date-card_description-item {
+  margin-bottom: 0.5rem;
+}
+
+.calendar__date-card_description-title h3 {
+  color: #072136;
+  font-size: 18px;
+  font-weight: bolder !important;
+}
+.calendar__date-card_description-time p span {
+  font-size: 15px;
+  color: var(--dark-blue);
+  padding-left: 0.2rem;
+}
+
+.calendar__date-card-button {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.calendar__date-card-button button {
+  background-color: transparent;
+  font-size: 18px;
+  color: #072136;
+  transition: var(--transition);
+}
+.calendar__date-card-button button:hover {
+  background-color: transparent;
+  font-size: 18px;
+  color: var(--yellow);
+  cursor: pointer;
 }
