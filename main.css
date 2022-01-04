@@ -9,6 +9,7 @@
   --orange: #e95b37;
   --OffWhite: #f8f8f8;
   --transition: ease-in-out 0.4s;
+  --radius: 0.25rem;
 }
 
 *,
@@ -375,6 +376,7 @@ body {
   align-items: center;
   background-color: #d2dfe9;
   min-height: 60vh;
+  margin-bottom: -15.5rem;
 }
 .caption__wrapper {
   width: 85%;
@@ -394,4 +396,76 @@ body {
 
 .svg__caption {
   margin-bottom: -5px;
+}
+.caption__main {
+  margin-bottom: 11rem;
+  display: flex;
+  justify-content: center;
+}
+
+.caption__img-wrapper {
+  border-radius: var(--radius);
+}
+.caption__img {
+  width: 100%;
+  height: auto;
+  margin: 2px;
+  max-width: 400px;
+  border-radius: var(--radius);
+}
+
+.caption__form {
+  width: 600px;
+  margin-left: 1rem;
+  background-color: #a7bfd3;
+  border-radius: var(--radius);
+}
+.caption__form form {
+  width: 100%;
+  height: 95%;
+  padding: 0 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.caption__form-text,
+.caption__form-email,
+.caption__form-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.caption__form-text textarea,
+.caption__form-name input,
+.caption__form-email input {
+  border-radius: var(--radius);
+  padding: 0.2rem;
+  color: #647787;
+}
+.caption__form-text label,
+.caption__form-name label,
+.caption__form-email label {
+  color: #2d363e;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.caption__form-button input {
+  width: 142px;
+  height: 46px;
+  text-transform: uppercase;
+  background-color: var(--dark-blue);
+  color: var(--OffWhite) !important;
+  border-radius: var(--radius);
+  letter-spacing: 1px;
+}
+
+.caption__form-text textarea::placeholder,
+.caption__form-email input::placeholder,
+.caption__form-name input::placeholder {
+  font-style: italic;
+  color: #90a7ba;
+  font-size: 0.7rem;
 }

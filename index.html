@@ -414,28 +414,54 @@
       <div class="caption__title">
         <h2>Weekly Caption This</h2>
       </div>
-      <div>
+      <div class="caption__main">
 
+        <div class="caption__img-wrapper">
+          <img class="caption__img"
+            src="https://res.cloudinary.com/duprwuo4j/image/upload/v1599168095/imgs_starwars/imgs/0_lc24ad.jpg">
+
+        </div>
+        <div class="caption__form">
+          <form>
+            <div class="caption__form-name">
+              <label for="name">Name:</label>
+              <input placeholder="Tania A. " id="name" type="text" autocomplete="Enter the person's name"
+                aria-required="true">
+            </div>
+            <div class="caption__form-email">
+              <label for="email">Email: </label>
+              <input placeholder="tania.a@friscoisd.org " type="email" id="email" name="email" aria-required="true">
+            </div>
+            <div class="caption__form-text">
+              <label for="textarea">Message: </label>
+              <textarea placeholder="Kudos to you Tania for the amazing work" id="textarea" name="textarea" rows="6"
+                cols="50"></textarea>
+            </div>
+            <div class="caption__form-button">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
 
 
   </section>
-  <div class="svg__caption">
+  <!-- <div class="svg__caption">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#d2dfe9" fill-opacity="1"
         d="M0,320L80,293.3C160,267,320,213,480,186.7C640,160,800,160,960,144C1120,128,1280,96,1360,80L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
       </path>
     </svg>
-  </div>
+  </div> -->
 
   <!-- Footer -->
-  <!-- <svg id="svg__footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <svg id="svg__footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#184366" fill-opacity="1"
       d="M0,128L80,112C160,96,320,64,480,80C640,96,800,160,960,170.7C1120,181,1280,139,1360,117.3L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
     </path>
-  </svg> -->
+  </svg>
   <footer id="FooterWrapper" role="region">
     <div class="main_footer">
       <div class="main_footer__mission">
