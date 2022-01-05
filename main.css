@@ -379,13 +379,12 @@ body {
   align-items: center;
   background-color: #d2dfe9;
   min-height: 60vh;
-  /* margin-bottom: -15.5rem; */
+  padding-top: 8rem;
 }
 .caption__wrapper {
   width: 85%;
   display: grid;
   grid-template-columns: 12fr;
-  /* margin-bottom: 8rem; */
 }
 
 .caption__title {
@@ -510,4 +509,124 @@ body {
   font-style: italic;
   color: #90a7ba;
   font-size: 0.7rem;
+}
+
+/* 
+==========================================================================
+  Article Section 
+========================================================================== 
+*/
+
+.article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  margin-top: 3rem;
+}
+.article__wrapper {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 12fr;
+}
+
+.article__title {
+  margin: 0;
+}
+.article__title h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #626874;
+  text-transform: uppercase;
+}
+
+.articles__cards-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  flex-wrap: wrap;
+}
+
+.articles__card {
+  width: 350px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-image: radial-gradient(73% 147%, #f8f8f8 59%, #f8f8f8 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.articles__card-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.svg_holder {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svg_holder-green {
+  background-color: hsla(190, 47%, 56%, 0.282);
+  color: hsl(190, 47%, 56%) !important;
+}
+.svg_holder-blue {
+  background-color: hsl(207, 62%, 25%, 0.282);
+  color: hsl(207, 62%, 25%) !important;
+}
+.svg_holder-orange {
+  background-color: hsl(12, 80%, 56%, 0.282);
+  color: hsl(12, 80%, 56%) !important;
+}
+.svg_holder-yellow {
+  background-color: hsl(45, 88%, 48%, 0.282);
+  color: hsl(45, 94%, 41%) !important;
+}
+
+.articles__card-img svg {
+  width: 100px;
+  height: 100px;
+}
+
+.articles__card-title,
+.articles__card-text {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.articles__card-title h3 {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #072136;
+}
+.articles__card-text p {
+  font-size: 0.8rem;
+  color: var(--dark-blue);
+}
+.articles__card-btn button {
+  width: 122px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: var(--orange);
+  color: var(--OffWhite) !important;
+  border-radius: var(--radius);
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
 }
