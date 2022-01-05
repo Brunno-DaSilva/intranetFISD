@@ -524,6 +524,7 @@ body {
   align-items: flex-start;
   min-height: 60vh;
   margin-top: 3rem;
+  margin-bottom: 10rem;
 }
 .article__wrapper {
   width: 85%;
