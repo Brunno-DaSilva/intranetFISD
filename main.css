@@ -71,7 +71,7 @@ body {
 .banner__wrapper {
   display: grid;
   grid-template-columns: 9fr 3fr;
-  height: 800px;
+  min-height: 900px;
 }
 
 .banner__col-left {
