@@ -89,7 +89,7 @@ footer .main_footer .main_footer__mission p {
   transition: ease-in-out 0.4s;
 }
 .icons__holder a:hover {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--yellow);
 }
 footer .main_footer__address {

@@ -20,6 +20,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -29,10 +30,12 @@ body {
 .header {
   background-color: var(--dark-blue);
   border-bottom: 2px solid var(--yellow);
+  overflow: hidden;
 }
 .header__menu ul {
   display: flex;
   list-style: none;
+  padding: 0 !important;
 }
 
 .header__menu ul li a {
@@ -57,7 +60,7 @@ body {
 }
 
 .header__logo img {
-  width: 150px;
+  width: 180px;
   height: auto;
 }
 /* 
@@ -71,7 +74,7 @@ body {
 .banner__wrapper {
   display: grid;
   grid-template-columns: 9fr 3fr;
-  min-height: 900px;
+  min-height: 800px;
 }
 
 .banner__col-left {
