@@ -291,6 +291,11 @@ body {
   background: #f3f3f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  transition: var(--transition);
+}
+
+.calendar__date-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .calendar__date-card .calendar__date-card_left_side {
