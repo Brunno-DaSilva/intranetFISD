@@ -506,6 +506,11 @@ body {
   color: var(--OffWhite) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
+  transition: var(--transition);
+}
+.caption__form-button input:hover {
+  background-color: var(--orange);
+  cursor: pointer;
 }
 
 .caption__form-text textarea::placeholder,
@@ -591,8 +596,7 @@ body {
 
 .articles__search-button input:hover {
   cursor: pointer;
-  color: var(--yellow) !important;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: var(--orange);
 }
 .articles__cards-container {
   margin-top: 3rem;
@@ -676,10 +680,15 @@ body {
   width: 122px;
   height: 40px;
   text-transform: uppercase;
-  background-color: var(--orange);
+  background-color: var(--dark-blue);
   color: var(--OffWhite) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
   font-size: 0.7rem;
   margin-top: 0.5rem;
+  transition: var(--transition);
+}
+.articles__card-btn button:hover {
+  cursor: pointer;
+  background-color: var(--orange);
 }
