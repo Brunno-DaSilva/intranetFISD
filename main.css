@@ -231,6 +231,7 @@ body {
   font-size: 0.8rem;
   color: var(--dark-blue);
   transition: var(--transition);
+  background-color: transparent;
 }
 .qlinks__modal--button:hover {
   cursor: pointer;
@@ -243,7 +244,7 @@ body {
 ===========================================
 */
 .qlinks__modal {
-  /* display: none; */
+  display: none;
   position: fixed; /* Stay in place */
   z-index: 999; /* Sit on top */
   padding-top: 50px; /* Location of the box */
