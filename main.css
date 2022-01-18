@@ -10,6 +10,7 @@
   --OffWhite: #f8f8f8;
   --transition: ease-in-out 0.4s;
   --radius: 0.25rem;
+  --border: 1px solid red;
 }
 
 *,
@@ -201,20 +202,178 @@ body {
 }
 .qlinks__links-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin: 0.5rem 0;
+}
+.qlinks__links-item:last-child p {
+  color: var(--orange);
 }
 
 .qlinks__links-item p {
-  font-size: 0.9rem;
-  margin-left: 0.2rem;
+  width: 90%; /*This makes both the icons and text align*/
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8rem;
   color: #626874;
   transition: var(--transition);
 }
+
 .qlinks__links-item p:hover {
   cursor: pointer;
   color: var(--yellow);
 }
+
+.qlinks__modal--button {
+  width: 90%; /*This makes both the icons and text align*/
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--dark-blue);
+  transition: var(--transition);
+}
+.qlinks__modal--button:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+/* 
+===========================================
+  Quick link Modal  
+===========================================
+*/
+.qlinks__modal {
+  /* display: none; */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.qlinks__modal--content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  min-height: 70vh;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+.qlinks__modal--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.qlinks__modal--close {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+.qlinks__modal--close-button {
+  width: 50px;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: var(--dark-blue);
+  color: var(--OffWhite) !important;
+  border-radius: 50%;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+.qlinks__modal--close-button:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+.qlinks__modal--title {
+}
+.qlinks__modal--title h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #626874;
+}
+.qlinks__modal--form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.qlinks__modal--form form {
+  background-color: #f3f3f3;
+  border-radius: var(--radius);
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.qlinks__modal--form-name input,
+.qlinks__modal--form-url input {
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  min-width: 350px;
+  background-color: #ffffff;
+  text-indent: 5px;
+}
+
+.qlinks__modal--form-name input::placeholder,
+.qlinks__modal--form-url input::placeholder {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.qlinks__modal--form-button input {
+  width: 220px;
+  height: 46px;
+  text-transform: uppercase;
+  background-color: var(--dark-blue);
+  color: var(--OffWhite) !important;
+  border-radius: var(--radius);
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.qlinks__modal--form-button input:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+}
+
+.qlinks__modal--results {
+  width: 65%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr 1.1fr 1.1fr;
+  gap: 5px;
+  margin: auto;
+}
+/* .qlinks__modal--results .qlinks__links-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.qlinks__modal--results .qlinks__links-item:last-child p {
+  color: var(--orange);
+}
+
+.qlinks__modal--results .qlinks__links-item p {
+  /* width: 60%; This makes both the icons and text align */
+/*text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #626874;
+  transition: var(--transition);
+} */
 
 /* 
 ==========================================================================
@@ -267,6 +426,7 @@ body {
   transform: rotate(90deg);
   color: var(--light-blue) !important;
 }
+
 /* 
 ========================
   Calendar Cards
@@ -516,6 +676,7 @@ body {
 .caption__form-text textarea::placeholder,
 .caption__form-email input::placeholder,
 .caption__form-name input::placeholder {
+  font-family: "Roboto", sans-serif;
   font-style: italic;
   color: #90a7ba;
   font-size: 0.7rem;
@@ -579,6 +740,7 @@ body {
 }
 
 .articles__search-field input::placeholder {
+  font-family: "Roboto", sans-serif;
   padding-left: 0.5rem;
   letter-spacing: 1px;
 }
