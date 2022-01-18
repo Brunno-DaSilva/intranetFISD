@@ -3,7 +3,7 @@
   Get Footer Date 
 ========================================================================== 
 */
+const getDate_el = document.getElementById("getDate");
 const getYear = new Date().getFullYear();
 const fullYear = `${getYear}`;
-const getDate = document.getElementById("getDate");
-getDate.innerHTML = fullYear;
+getDate_el.innerHTML = fullYear;
