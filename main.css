@@ -257,17 +257,21 @@ body {
 }
 
 .qlinks__modal--content {
+  position: relative;
   background-color: #ffffff;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 80%;
-  min-height: 70vh;
+  min-height: 90vh;
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .qlinks__modal--top {
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -295,6 +299,7 @@ body {
 }
 
 .qlinks__modal--title {
+  margin-left: 2rem;
 }
 .qlinks__modal--title h2 {
   font-size: 1.2rem;
@@ -306,7 +311,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .qlinks__modal--form form {
   background-color: #f3f3f3;
@@ -350,11 +355,11 @@ body {
 }
 
 .qlinks__modal--results {
-  width: 65%;
+  width: 70%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1.1fr 1.1fr 1.1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 5px;
-  margin: auto;
+  margin-top: 1rem;
 }
 /* .qlinks__modal--results .qlinks__links-item {
   display: flex;
@@ -374,6 +379,16 @@ body {
   color: #626874;
   transition: var(--transition);
 } */
+
+.qlinks__modal--svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -5px;
+}
 
 /* 
 ==========================================================================
