@@ -1,5 +1,3 @@
-console.log("Ciao bella mi piacere parlare il italiano");
-
 const highlightImgBG = document.getElementById("banner__highlight_img");
 const alertOneImgBG = document.getElementById("banner__alert_one_img");
 const alertTwoImgBG = document.getElementById("banner__alert_two_img");
