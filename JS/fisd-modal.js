@@ -21,3 +21,5 @@ window.onclick = function (event) {
     modal__main.style.display = "none";
   }
 };
+
+const FISD_Modal = () => {};
