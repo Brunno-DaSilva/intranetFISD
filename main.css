@@ -4,13 +4,15 @@
 :root {
   --dark-blue: #184366;
   --light-green: #0e987d;
-  --light-blue: #5ab3c4;
-  --yellow: #e8b20f;
-  --orange: #e95b37;
-  --OffWhite: #f8f8f8;
+  --light-blue-accent: #5ab3c4;
+  --yellow-accent: #e8b20f;
+  --orange-accent: #e95b37;
+  --foreground: #626874;
+  --off-white: #f8f8f8;
+  --font-robot: "Roboto", sans-serif;
   --transition: ease-in-out 0.4s;
   --radius: 0.25rem;
-  --border: 1px solid red;
+  --border: 1px solid #e95b37;
 }
 
 *,
@@ -23,14 +25,14 @@
 }
 
 body {
-  background-color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  background-color: var(--off-white);
+  font-family: var(--font-robot);
   height: 100vh;
 }
 
 .header {
   background-color: var(--dark-blue);
-  border-bottom: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow-accent);
   overflow: hidden;
 }
 .header__menu ul {
@@ -41,7 +43,7 @@ body {
 
 .header__menu ul li a {
   text-decoration: none;
-  color: var(--OffWhite);
+  color: var(--off-white);
   padding: 1.5rem;
   text-transform: uppercase;
 }
@@ -95,11 +97,11 @@ body {
 .banner_alert-one {
   width: 100%;
   height: 50%;
-  border-left: 2px solid var(--OffWhite);
+  border-left: 2px solid var(--off-white);
 }
 
 .banner_alert-one {
-  border-bottom: 2px solid var(--OffWhite);
+  border-bottom: 2px solid var(--off-white);
 }
 
 .banner__highlight {
@@ -134,27 +136,27 @@ body {
 .banner__text h2 {
   letter-spacing: 1px;
   font-size: 1.8rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
 }
 .banner__text h4 {
   letter-spacing: 1px;
   font-size: 1.4rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
 }
 .banner__text p {
   font-size: 1rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
   letter-spacing: 1px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 .banner__text p:hover {
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 .banner__text p a i {
   font-size: 1rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
   margin-left: 0.5rem;
 }
 
@@ -193,7 +195,7 @@ body {
 .qlinks__title h2 {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #626874;
+  color: var(--foreground);
 }
 
 .qlinks__links {
@@ -207,7 +209,7 @@ body {
   margin: 0.5rem 0;
 }
 .qlinks__links-item:last-child p {
-  color: var(--orange);
+  color: var(--orange-accent);
 }
 
 .qlinks__links-item p {
@@ -215,13 +217,13 @@ body {
   text-transform: uppercase;
   text-align: left;
   font-size: 0.8rem;
-  color: #626874;
+  color: var(--foreground);
   transition: var(--transition);
 }
 
 .qlinks__links-item p:hover {
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 
 .qlinks__modal--button {
@@ -235,7 +237,7 @@ body {
 }
 .qlinks__modal--button:hover {
   cursor: pointer;
-  color: var(--orange);
+  color: var(--orange-accent);
 }
 
 /* 
@@ -289,13 +291,13 @@ body {
   height: 50px;
   text-transform: uppercase;
   background-color: var(--dark-blue);
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   border-radius: 50%;
   letter-spacing: 1px;
   transition: var(--transition);
 }
 .qlinks__modal--close-button:hover {
-  background-color: var(--orange);
+  background-color: var(--orange-accent);
   cursor: pointer;
 }
 
@@ -305,7 +307,7 @@ body {
 .qlinks__modal--title h2 {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #626874;
+  color: var(--foreground);
 }
 .qlinks__modal--form {
   width: 100%;
@@ -335,7 +337,7 @@ body {
 
 .qlinks__modal--form-name input::placeholder,
 .qlinks__modal--form-url input::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-robot);
   letter-spacing: 1px;
 }
 
@@ -344,7 +346,7 @@ body {
   height: 46px;
   text-transform: uppercase;
   background-color: var(--dark-blue);
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
   transition: var(--transition);
@@ -352,7 +354,7 @@ body {
 
 .qlinks__modal--form-button input:hover {
   cursor: pointer;
-  background-color: var(--orange);
+  background-color: var(--orange-accent);
 }
 
 .qlinks__modal--results {
@@ -369,7 +371,7 @@ body {
   margin: 0.5rem 0;
 }
 .qlinks__modal--results .qlinks__links-item:last-child p {
-  color: var(--orange);
+  color: var(--orange-accent);
 }
 
 .qlinks__modal--results .qlinks__links-item p {
@@ -377,7 +379,7 @@ body {
 /*text-transform: uppercase;
   text-align: left;
   font-size: 0.8rem;
-  color: #626874;
+  color: var(--foreground);
   transition: var(--transition);
 } */
 
@@ -419,7 +421,7 @@ body {
 .calendar__title h2 {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #626874;
+  color: var(--foreground);
 }
 .calendar__sub_title {
   display: flex;
@@ -429,18 +431,18 @@ body {
 .calendar__sub_title h3 {
   font-size: 1.1rem;
   letter-spacing: 1px;
-  color: #626874;
+  color: var(--foreground);
   text-transform: uppercase;
   transition: var(--transition);
 }
 
 .calendar__sub_title h3:hover {
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 .calendar__sub_title svg {
   transform: rotate(90deg);
-  color: var(--light-blue) !important;
+  color: var(--light-blue-accent) !important;
 }
 
 /* 
@@ -485,7 +487,7 @@ body {
   padding: 0.5rem;
 }
 .calendar__date-card .calendar__date-card_left_side p {
-  color: var(--OffWhite);
+  color: var(--off-white);
   font-size: 30px;
   font-style: normal;
 }
@@ -538,7 +540,7 @@ body {
 .calendar__date-card-button button:hover {
   background-color: transparent;
   font-size: 18px;
-  color: var(--yellow);
+  color: var(--yellow-accent);
   cursor: pointer;
 }
 
@@ -583,7 +585,6 @@ body {
 }
 .caption__main {
   width: 90%;
-  /* margin-bottom: 11rem; */
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -600,7 +601,7 @@ body {
   width: 146px;
   height: 46px;
   text-transform: uppercase;
-  background-color: var(--OffWhite);
+  background-color: var(--off-white);
   color: var(--dark-blue) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
@@ -612,15 +613,15 @@ body {
 }
 .caption__btn:hover {
   cursor: pointer;
-  color: var(--orange) !important;
+  color: var(--orange-accent) !important;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .remove {
   background-color: #e95b37;
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
 }
 .remove:hover {
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
 }
 
 .caption__img-wrapper {
@@ -679,20 +680,20 @@ body {
   height: 46px;
   text-transform: uppercase;
   background-color: var(--dark-blue);
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
   transition: var(--transition);
 }
 .caption__form-button input:hover {
-  background-color: var(--orange);
+  background-color: var(--orange-accent);
   cursor: pointer;
 }
 
 .caption__form-text textarea::placeholder,
 .caption__form-email input::placeholder,
 .caption__form-name input::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-robot);
   font-style: italic;
   color: #90a7ba;
   font-size: 0.7rem;
@@ -725,7 +726,7 @@ body {
 .article__title h2 {
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #626874;
+  color: var(--foreground);
   text-transform: uppercase;
 }
 
@@ -756,7 +757,7 @@ body {
 }
 
 .articles__search-field input::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-robot);
   padding-left: 0.5rem;
   letter-spacing: 1px;
 }
@@ -766,7 +767,7 @@ body {
   height: 46px;
   text-transform: uppercase;
   background-color: var(--dark-blue);
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
   transition: var(--transition);
@@ -774,7 +775,7 @@ body {
 
 .articles__search-button input:hover {
   cursor: pointer;
-  background-color: var(--orange);
+  background-color: var(--orange-accent);
 }
 .articles__cards-container {
   margin-top: 3rem;
@@ -859,7 +860,7 @@ body {
   height: 40px;
   text-transform: uppercase;
   background-color: var(--dark-blue);
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   border-radius: var(--radius);
   letter-spacing: 1px;
   font-size: 0.7rem;
@@ -868,5 +869,5 @@ body {
 }
 .articles__card-btn button:hover {
   cursor: pointer;
-  background-color: var(--orange);
+  background-color: var(--orange-accent);
 }
