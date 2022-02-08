@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: var(--off-white);
+  background-color: #ffffff;
   font-family: var(--font-robot);
   height: 100vh;
 }

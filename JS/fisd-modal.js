@@ -22,4 +22,4 @@ window.onclick = function (event) {
   }
 };
 
-const FISD_Modal = () => {};
+const FISD_Modal = (modal__main, modal__openButton, modal__closeButton) => {};
