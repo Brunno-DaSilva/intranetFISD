@@ -892,6 +892,64 @@ address {
 
 /*******************************************************
 =====================================
+==>        SEARCH` Section
+=====================================
+*******************************************************/
+
+#search__results_container {
+  position: absolute;
+  min-width: 1100px;
+  top: 130.3%;
+  left: -432%;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#search__results {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 2px;
+}
+#search__results li a {
+  font-size: 1.2rem;
+  color: var(--off-white);
+}
+
+.character {
+  list-style-type: none;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: 1fr !important;
+  text-align: left;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+.character a {
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+.character a:hover {
+  cursor: pointer;
+  color: var(--yellow-accent) !important;
+}
+
+.search__link {
+  list-style: none;
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+.displayNone {
+  display: none;
+}
+
+/*******************************************************
+=====================================
 ==>        Hamburger` Section
 =====================================
 *******************************************************/
