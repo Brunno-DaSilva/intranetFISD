@@ -27,7 +27,7 @@
 body {
   background-color: #ffffff;
   font-family: var(--font-robot);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*******************************************************
@@ -37,7 +37,7 @@ body {
 =====================================
 *******************************************************/
 
-.header {
+/* .header {
   background-color: var(--dark-blue);
   border-bottom: 2px solid var(--yellow-accent);
   overflow: hidden;
@@ -72,7 +72,7 @@ body {
 .header__logo img {
   width: 180px;
   height: auto;
-}
+} */
 /* 
 ==========================================================================
   Highlight Section 
@@ -274,7 +274,7 @@ body {
 .qlinks__modal {
   display: none;
   position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+  z-index: 200; /* Sit on top */
   padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;

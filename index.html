@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/jpg" href="./img/Fsun_SM.svg" />
+  <!--Header-Nav CSS -->
+  <link rel="stylesheet" href="./CSS/nav-header.css" />
   <!--Main CSS -->
   <link rel="stylesheet" href="./CSS/main.css" />
   <!-- Footer CSS-->
@@ -20,7 +22,23 @@
 </head>
 
 <body>
-  <header>
+  <!-- <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="./index.html"><img src="./img/fisd-logo-white-rgb.svg" alt="" /></a>
+      </div>
+      <nav class="header__menu">
+        <ul>
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li><a href="#">STAFF</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="./ABOUT.html">ABOUT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+
+  <header class="header">
     <nav aria-label="Main Navigation Dropdown" class="navigation" role="navigation">
       <div class="logo">
         <a id="logo-lg" tabindex="0" class="lg-screen" href="https://www.friscoisd.org/"><img
@@ -35,9 +53,9 @@
           <i class="fas fa-bars"></i>
         </button>
       </div>
-      <!-- ==========================
-  ==> Add the mobile navigation  
-  ==============================-->
+      <!--==========================
+        ==> Add the mobile navigation  
+        ==============================-->
 
       <!-- main nav -->
       <ul class="nav" id="nav">
@@ -637,6 +655,9 @@
     </nav>
 
   </header>
+
+
+
   <!-- Banner Section -->
 
   <section class="banner">
@@ -1726,6 +1747,7 @@
   </footer>
   <!-- Scripts -->
   <script src="./JS/article-search.js"></script>
+  <script src="./JS/header-nav.js"></script>
   <script src="./JS/fisd-modal.js"></script>
   <script src="./JS/footer.js"></script>
   <script src="./JS/app.js"></script>

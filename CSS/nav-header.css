@@ -1,0 +1,1972 @@
+/******************************************************
+TODOs
+
+[ x ] Make School items display the yellow underline on hover
+[ x ] Add icon images
+[ x ] onClick get rid of hover 
+[ X ] Responsible Design***
+[ O ] Make search form work properly  
+
+******************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --dark-blue: #184366;
+  --light-green: #0e987d;
+  --light-blue-accent: #5ab3c4;
+  --yellow-accent: #e8b20f;
+  --orange-accent: #e95b37;
+  --foreground: #626874;
+  --off-white: #f8f8f8;
+  --font-robot: "Roboto", sans-serif;
+  --transition: ease-in-out 0.4s;
+  --radius: 0.25rem;
+  --border: 1px solid #e95b37;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*******************************************************
+=====================================
+==>  Navigation Style Starts Here 
+==>  BEM - Methodology 
+=====================================
+*******************************************************/
+
+body header {
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--dark-blue);
+  border-bottom: 2px solid var(--yellow-accent);
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  position: absolute;
+  z-index: 9999;
+}
+
+body header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 75%;
+  background: var(--dark-blue);
+  padding: 1.1rem 0.5rem;
+}
+
+body header .navigation .logo {
+  width: 230px;
+  padding: 0.5rem;
+}
+body header .navigation .logo #logo-lg {
+  outline: none !important;
+}
+
+body header .navigation .logo img {
+  width: 80%;
+  height: auto;
+}
+
+body header .navigation .nav {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body header .navigation .nav .nav__primary-item {
+  list-style-type: none;
+  padding: 0.5rem;
+  padding-top: 0.9rem !important;
+  position: relative;
+}
+
+body header .navigation .nav .nav__primary-item .display__onHover,
+.display__onClick,
+.display__onClick_about,
+.display__onClick_schools,
+.display__onClick_employment {
+  position: absolute;
+  top: 120%;
+  padding: 0.9rem;
+  background-color: var(--off-white);
+  border-radius: 0.25rem;
+  z-index: 900;
+  display: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-width: 20rem;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.show a {
+  color: var(--dark-blue) !important;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+.display__onClick {
+  left: -1%;
+}
+/*******************************************************
+=====================================
+==>        About Section
+=====================================
+*******************************************************/
+
+body header .navigation .nav .about .show_about {
+  position: absolute;
+  left: -6rem;
+  width: 45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .about {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .about .show_about .button {
+  display: inline-block;
+  margin: 0.3em;
+  padding: 1.1rem 3rem;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+body header .navigation .nav .about .show_about .button:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .about .show_about .button__orange {
+  background-color: #af4429;
+  color: var(--off-white) !important;
+}
+
+body header .navigation .nav .about .show_about .button__yellow {
+  background-color: #ae860b;
+}
+
+body header .navigation .nav .about .show_about .button__light_green {
+  background-color: #0b725e;
+}
+
+body header .navigation .nav .about .show_about .button__light_blue {
+  background-color: #448693;
+}
+
+body header .navigation .nav .about .show_about .about__column_left,
+body header .navigation .nav .about .show_about .about__column_middle {
+  width: 39%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body header .navigation .nav .about .show_about a {
+  color: var(--dark-blue) !important;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .about .show_about .about__column_right {
+  /* width: 20%; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex: auto;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .about
+  .show_about
+  .about__column_right
+  .button__light_green,
+body
+  header
+  .navigation
+  .nav
+  .about
+  .show_about
+  .about__column_right
+  .button__light_blue,
+body
+  header
+  .navigation
+  .nav
+  .about
+  .show_about
+  .about__column_right
+  .button__orange,
+body
+  header
+  .navigation
+  .nav
+  .about
+  .show_about
+  .about__column_right
+  .button__yellow {
+  text-transform: uppercase;
+  color: var(--off-white) !important;
+  font-weight: bolder;
+}
+
+/*******************************************************
+=====================================
+==>        Schools Section
+=====================================
+*******************************************************/
+body header .navigation .nav .schools {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .schools .show_schools {
+  position: absolute;
+  left: -23.5rem;
+  width: 58rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .schools .show_schools .schooltab__container {
+  width: 98%;
+  min-height: 400px;
+  /* margin: 0 auto; */
+  background-color: var(--off-white);
+  color: var(--dark-blue) !important;
+}
+
+body header .navigation .nav .schools .show_schools .schooltab__container p {
+  list-style: none;
+  display: inline-flex;
+}
+body header .navigation .nav .schools .show_schools .schooltab__container p a {
+  text-decoration: none;
+  color: var(--dark-blue) !important;
+  padding: 0.4rem;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  #nav-tab {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  #nav-tab
+  p {
+  margin-left: 2rem !important;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  #nav-tab
+  a {
+  color: #5b5f66 !important;
+  font-size: 1.3rem;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  #nav-tab
+  .active
+  a {
+  transition: all 0.3s ease-in-out;
+  color: var(--dark-blue) !important;
+  font-weight: 600;
+  border-bottom: 3px solid var(--yellow-accent);
+}
+
+.close {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 84%;
+  top: -0.5;
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 991;
+  transition: ease-in-out 0.4s;
+}
+
+.close button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 999;
+}
+.close:hover,
+.close__mb:hover {
+  color: var(--orange-accent);
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .tab-pane {
+  display: none;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .tab-pane.active {
+  display: block;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .elementary__container,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .middle__container,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .high__container,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .program_centers__container {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .elementary__container
+  .schools__elementary_item,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .middle__container
+  .schools__middle_item,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .high__container
+  .schools__high_item,
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .program_centers__container
+  .schools__program_centers_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  text-decoration: none;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .high__container
+  .schools__high_item {
+  justify-content: flex-start;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .high__container
+  .schools__high_item
+  p {
+  padding: 0.5rem 0;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools
+  .show_schools
+  .schooltab__container
+  .elementary__container
+  .schools__elementary_item
+  a {
+  margin-bottom: 1rem;
+  text-decoration: none !important;
+}
+/*******************************************************
+=====================================
+==>        Employment Section
+=====================================
+*******************************************************/
+body header .navigation .nav .employment {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .employment .show_employment {
+  position: absolute;
+  left: -31.8rem;
+  width: 53rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_one,
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_two,
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_three,
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_four {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_two {
+  width: 30%;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment
+  .show_employment
+  .employment__column_four {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+}
+
+body header .navigation .nav .employment .show_employment a {
+  color: var(--dark-blue) !important;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+/*******************************************************
+=====================================
+==>        Icons Section
+=====================================
+*******************************************************/
+
+body header .navigation .icons {
+  width: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  color: var(--yellow-accent);
+  position: relative;
+}
+
+/*
+=====================================
+==>        Icons Search
+=====================================
+*/
+
+body header .navigation .icons .icons__search {
+  display: flex;
+  padding: 0 !important;
+}
+
+body header .navigation .icons .icons__search a {
+  padding: 0;
+}
+body header .navigation .icons .icons__search a i {
+  padding: 0;
+}
+
+body header .navigation .icons .icons__search .trigger_search {
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+body header .navigation .icons .icons__search .trigger_search:hover {
+  color: var(--yellow-accent);
+}
+
+body header .navigation .icons .icons__search .input {
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  transition: 0.25s ease-in-out all;
+  width: 0;
+  padding: 0;
+  margin-right: -25px;
+  height: 40px;
+}
+
+body header .navigation .icons .input-open {
+  width: 62vw !important;
+  padding: 0 50px !important;
+  margin-right: 10px !important;
+  color: #1e5583;
+  font-size: 1rem;
+  z-index: 999;
+}
+
+body header .navigation .icons .input-open::placeholder {
+  color: #858484;
+  font-size: 1rem;
+}
+
+body header .navigation .icons .icons__search .anchor {
+  padding: 0 1rem;
+  color: var(--off-white);
+  font-size: 1.2rem;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+body header .navigation .icons .icons__search a:hover {
+  color: var(--yellow-accent);
+}
+
+body .animation__underline {
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+.hover_nav_item {
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+.hover_nav_item:hover {
+  cursor: pointer;
+  color: var(--yellow-accent);
+}
+
+body .animation__underline:hover {
+  cursor: pointer;
+}
+
+body .animation__underline:after {
+  background: none repeat scroll 0 0 transparent;
+  top: 100%;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 0.5rem;
+  left: 50%;
+  position: absolute;
+  background: var(--yellow-accent);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  z-index: 99;
+}
+
+body .animation__underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+body .padding-bottom {
+  padding-bottom: 0.7rem;
+}
+
+body .nav_white_text {
+  color: var(--off-white);
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body .nav_dark_text {
+  color: var(--dark-blue);
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+body .arrow-up,
+body .arrow-up__news,
+body .arrow-up__about,
+body .arrow-up__employment {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid var(--off-white);
+  position: absolute;
+  left: 42.5%;
+  top: -2%;
+}
+
+body .arrow-up__news {
+  left: 3%;
+  top: -7.5%;
+}
+body .arrow-up__about {
+  left: 15.5%;
+  top: -4%;
+}
+body .arrow-up__employment {
+  left: 62.5%;
+  top: -7.5%;
+}
+
+address {
+  font-style: normal;
+}
+
+/*******************************************************
+=====================================
+==>        Hamburger` Section
+=====================================
+*******************************************************/
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #f8f8f8;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav__mobile,
+.close__mb {
+  display: none;
+}
+
+body .md-screen,
+body .sm-screen,
+body .sm-screen_search {
+  display: none;
+}
+
+/*******************************************************
+=====================================
+==>        Media Queries
+=====================================
+*******************************************************/
+
+/*
+=====================================
+==>        Max-Width: 1914px
+=====================================
+*/
+@media (max-width: 1914px) {
+  body {
+    background-color: #98960e;
+  }
+
+  body header .navigation {
+    width: 80%;
+  }
+
+  body header .navigation .logo {
+    width: 230px;
+  }
+
+  body header .navigation .nav {
+    margin-left: -4rem;
+  }
+
+  body header .navigation .icons .input-open {
+    width: 65vw !important;
+  }
+
+  #search__results_container {
+    min-width: 55vw !important;
+    top: 130.3% !important;
+    left: -430% !important;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 1449px
+=====================================
+*/
+
+@media (max-width: 1449px) {
+  body {
+    background-color: #980e0e;
+  }
+  body header .navigation {
+    width: 85%;
+  }
+  body header .navigation {
+    justify-content: space-between;
+  }
+
+  body header .navigation .logo {
+    width: 120px;
+  }
+  body header .navigation .nav {
+    margin-left: -5rem;
+  }
+
+  body .lg-screen {
+    display: none;
+  }
+  body .md-screen {
+    display: block;
+  }
+
+  body header .navigation .icons .input-open {
+    width: 68.5vw !important;
+  }
+  body .icons .icons__search {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body .icons .icons__search a {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body .icons .icons__search a i {
+    font-size: 1rem;
+  }
+
+  body header .navigation .nav .employment .show_employment {
+    left: -36rem;
+    width: 60rem;
+  }
+  #search__results_container {
+    min-width: 60vw !important;
+    top: 130.3% !important;
+    left: -450% !important;
+  }
+}
+/*
+=====================================
+==>        Max-Width: 1284px
+=====================================
+*/
+
+@media (max-width: 1284px) {
+  body {
+    background-color: #5f837c;
+  }
+
+  body header .navigation {
+    justify-content: space-between;
+    width: 90% !important;
+  }
+  body header .navigation .nav {
+    margin-left: -5rem;
+  }
+  body header .navigation .icons .input-open {
+    width: 70vw !important;
+  }
+
+  body .arrow-up__employment {
+    left: 64.5%;
+    top: -7.5%;
+  }
+  #search__results_container {
+    min-width: 65vw !important;
+    top: 130.3% !important;
+    left: -450% !important;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 1157px
+=====================================
+*/
+
+@media (max-width: 1157px) {
+  body {
+    background-color: #3aebf1;
+  }
+  body header .navigation {
+    width: 88% !important;
+    justify-content: flex-start;
+  }
+
+  body header .navigation .logo {
+    min-width: 80px;
+    max-width: 80px;
+  }
+
+  body .md-screen {
+    display: none;
+  }
+  body .lg-screen {
+    display: none;
+  }
+  body .sm-screen {
+    display: block;
+  }
+
+  body header .navigation .nav {
+    margin-left: 3rem !important;
+  }
+
+  body header .navigation .icons {
+    margin-left: 3rem !important;
+  }
+  body header .navigation .icons .input-open {
+    width: 77vw !important;
+  }
+
+  #search__results_container {
+    width: 800px !important;
+    top: 130.3% !important;
+    left: -2100% !important;
+  }
+
+  .icons {
+    width: 40px !important;
+  }
+
+  .sm_hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1094px) {
+  body {
+    background-color: #c9f13a;
+  }
+  body header .navigation .nav {
+    margin-left: 1.5rem !important;
+  }
+
+  body header .navigation .icons {
+    margin-left: 3.5rem !important;
+  }
+  body header .navigation .icons .input-open {
+    width: 850px !important;
+  }
+
+  #search__results_container {
+    top: 130.3% !important;
+    left: -2050% !important;
+  }
+}
+/*
+=====================================
+==>        Max-Width: 900px
+=====================================
+*/
+
+@media (max-width: 950px) {
+  body {
+    background-color: var(--dark-blue);
+  }
+  body header .navigation .nav {
+    margin-left: 0rem !important;
+  }
+
+  .icons {
+    width: 0 !important;
+    display: none !important;
+  }
+  body header .navigation {
+    justify-content: space-between;
+  }
+  body .lg-screen {
+    display: block;
+  }
+  body .sm-screen {
+    display: none;
+  }
+  body .sm-screen_search {
+    display: block;
+  }
+  body .sm-screen_search button {
+    background: transparent !important;
+  }
+
+  body header .navigation .logo {
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .nav__mobile {
+    display: block;
+  }
+
+  body header .navigation .nav {
+    position: absolute !important;
+    background-color: #184366;
+    min-height: 110% !important;
+    width: 103vw;
+    height: 100vh;
+    top: 104%;
+    left: 110%;
+    z-index: 998 !important;
+    padding: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    transition: ease-in-out 0.5s;
+    overflow: auto !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .close__mb {
+    position: absolute;
+    width: 150px !important;
+    height: 50px !important;
+    left: 85%;
+    top: 0.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .close__mb button {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    font-size: 2.5rem !important;
+    color: var(--off-white);
+    z-index: 999;
+    transition: ease-in-out 0.4s;
+  }
+
+  .close__mb button:hover {
+    cursor: pointer;
+    color: var(--orange-accent);
+  }
+
+  .show {
+    min-width: 40vw;
+    min-height: 170px;
+    left: 0;
+  }
+
+  body .arrow-up__news {
+    left: 3% !important;
+    top: -7.5% !important;
+  }
+
+  /*
+=================================
+==>     Mobile About 900px
+=================================
+*/
+  .show_about {
+    max-width: 92vw;
+    left: 0% !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  body header .navigation .nav .about .show_about .about__column_right {
+    flex: auto;
+    width: auto;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  body header .navigation .nav .about .show_about .about__column_left {
+    flex: auto;
+    width: auto;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  body header .navigation .nav .about .show_about .about__column_middle {
+    padding: 0.5rem;
+  }
+  body .arrow-up__about {
+    left: 3.5% !important;
+    top: -4% !important;
+  }
+
+  /*
+=================================
+==>     Mobile Schools 900px
+=================================
+*/
+  body header .navigation .nav .nav__primary-item .display__onHover,
+  .display__onClick,
+  .display__onClick_about,
+  .display__onClick_schools,
+  .display__onClick_employment {
+    padding: 0.5rem !important;
+  }
+
+  body header .navigation .nav .schools .show_schools .schooltab__container {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    p
+    a {
+    padding: 0.2rem;
+  }
+  .show_schools {
+    max-width: 92vw;
+    left: 0 !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    width: 100%;
+    margin-top: 1rem;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+  }
+
+  .close {
+    width: 70px;
+    height: 35px;
+    font-size: 2.1rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1.1rem;
+  }
+
+  .elementary__container,
+  .middle__container,
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+  }
+
+  .elementary__container {
+    display: grid !important;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container {
+    padding: 0;
+    display: grid !important;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container
+    .schools__middle_item {
+    min-height: 200px !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .elementary__container
+    .schools__elementary_item
+    a {
+    margin-bottom: 0rem !important;
+    padding: 0 !important;
+  }
+
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container
+    .schools__high_item
+    p {
+    padding: 0;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .program_centers__container {
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  .schools__program_centers_item {
+    min-height: 1px !important;
+    padding: 0.3rem !important;
+    margin: 0.1rem !important;
+    text-decoration: none;
+  }
+  .schools__program_centers_item {
+    width: 270px;
+  }
+
+  body .arrow-up {
+    left: 2.5%;
+    top: -1%;
+  }
+  /*
+=================================
+==>     Mobile EMPLOYMENT
+=================================
+*/
+
+  .show_employment {
+    max-width: 550px;
+    left: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 2fr);
+    padding-left: 1rem !important;
+  }
+
+  body .arrow-up__employment {
+    left: 2.6% !important;
+    top: -5.5% !important;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 845px
+=====================================
+*/
+
+@media (max-width: 845px) {
+  .close__mb {
+    left: 84.5%;
+  }
+  .arrow-up {
+    display: none;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 800px
+=====================================
+*/
+
+@media (max-width: 800px) {
+  .close__mb {
+    left: 83.5%;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 734px
+=====================================
+*/
+@media (max-width: 734px) {
+  .close__mb {
+    left: 79%;
+  }
+  .show {
+    min-width: 50vw;
+  }
+
+  /*
+=================================
+==>     Mobile About 734px
+=================================
+*/
+
+  body header .navigation .nav .about .show_about .about__column_middle {
+    flex: auto;
+  }
+
+  /*
+=================================
+==>     Mobile Schools 734px
+=================================
+*/
+
+  body header .navigation .nav .nav__primary-item .display__onHover,
+  .display__onClick,
+  .display__onClick_about,
+  .display__onClick_schools,
+  .display__onClick_employment {
+    padding: 0.5rem !important;
+  }
+
+  body header .navigation .nav .schools .show_schools .schooltab__container {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 !important;
+  }
+  body header .navigation .nav .schools .show_schools .schooltab__container p {
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 0.5rem !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.5rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    p
+    a {
+    padding: 0.1rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1.1rem;
+  }
+
+  .elementary__container,
+  .middle__container,
+  .high__container,
+  .program_centers__container {
+    margin-top: 0.5rem !important;
+    padding: 0.2rem !important;
+  }
+
+  .elementary__container {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container {
+    grid-template-columns: 2fr 2fr;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container
+    .schools__high_item {
+    min-height: 1px;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+  /*
+=================================
+==> program_centers 734px
+=================================
+*/
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .program_centers__container {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .schools__program_centers_item {
+    width: 270px;
+    min-height: 50px !important;
+  }
+
+  .close {
+    left: 86%;
+  }
+  /*
+=================================
+==>     Mobile EMPLOYMENT
+=================================
+*/
+
+  .display__onClick_employment {
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .display__onClick_employment .employment__column_one,
+  .display__onClick_employment .employment__column_two,
+  .display__onClick_employment .employment__column_three {
+    width: 170px !important;
+    box-sizing: border-box;
+  }
+
+  .display__onClick_employment .employment__column_four {
+    flex: auto;
+  }
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer .main_footer .main_footer__mission p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 2rem 0;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 600px
+=====================================
+*/
+
+@media (max-width: 600px) {
+  .close__mb {
+    left: 78%;
+  }
+
+  .close {
+    left: 87%;
+  }
+
+  .container {
+    display: none;
+  }
+  .show {
+    min-width: 60vw;
+  }
+  /*
+=================================
+==> EMPLOYMENT 600px
+=================================
+*/
+  .show_employment {
+    max-width: 520px;
+    left: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 2fr);
+    padding-left: 1rem !important;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 550px
+=====================================
+*/
+@media (max-width: 550px) {
+  .close__mb {
+    left: 77%;
+  }
+  .show {
+    min-width: 70vw;
+  }
+
+  .close {
+    width: 60px;
+    height: 30px;
+    left: 85%;
+    font-size: 2rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    width: 100%;
+    margin-top: 1rem;
+    display: grid !important;
+    grid-template-columns: 4fr;
+  }
+
+  .elementary__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container {
+    grid-template-columns: 2fr;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container
+    .schools__high_item {
+    min-height: 1px;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container {
+    grid-template-columns: 2fr;
+  }
+
+  /*
+=================================
+==> program_centers 550px
+=================================
+*/
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .program_centers__container {
+    grid-template-columns: 2fr !important;
+  }
+  /*
+=================================
+==> EMPLOYMENT 550px
+=================================
+*/
+  .show_employment {
+    max-width: 420px;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 400px
+=====================================
+*/
+@media (max-width: 450px) {
+  .close__mb {
+    left: 70%;
+  }
+  .show {
+    min-width: 70vw;
+  }
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    width: 100%;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    p {
+    margin-left: 0.2rem !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1rem;
+  }
+
+  .close {
+    width: 60px;
+    height: 30px;
+    left: 78%;
+    font-size: 2rem;
+  }
+
+  .show_schools {
+    width: 85vw !important;
+    left: -0.5% !important;
+    padding: 0.1rem !important;
+  }
+  .elementary__container {
+    grid-template-columns: 1fr;
+    margin-bottom: 80px;
+  }
+
+  /*
+=================================
+==> EMPLOYMENT 480px
+=================================
+*/
+  .show_employment {
+    max-width: 320px;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  footer .main_footer .main_footer__mission p {
+    font-size: 1.9rem !important;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 1.5rem 0;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 320px
+=====================================
+*/
+@media (max-width: 325px) {
+  .close__mb {
+    left: 60%;
+    top: 1.5%;
+  }
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+  .close {
+    width: 60px;
+    height: 30px;
+    left: 68%;
+    font-size: 1.8rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    flex-direction: column;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 0.9rem;
+  }
+
+  .ourMissionP * {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  footer .main_footer .main_footer__mission p {
+    font-size: 1.5rem !important;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 0.5rem 0;
+  }
+  footer .icons__holder a {
+    font-size: 1rem;
+  }
+  footer .main_footer__address .footer__address p {
+    font-size: 0.9rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0 !important;
+    padding: 0.5rem 0.2rem !important;
+  }
+  footer .main_footer__address .footer__address p i {
+    color: var(--light-blue-accent);
+  }
+  footer .main_footer__copyright p {
+    margin-right: 0rem !important;
+  }
+  .address__Fax i,
+  .address__Phone i,
+  .address__Street i {
+    margin: 0.5rem;
+  }
+}
