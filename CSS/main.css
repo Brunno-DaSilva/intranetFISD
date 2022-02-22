@@ -30,6 +30,13 @@ body {
   height: 100vh;
 }
 
+/*******************************************************
+=====================================
+==>  Navigation Style Starts Here 
+==>  BEM - Methodology 
+=====================================
+*******************************************************/
+
 .header {
   background-color: var(--dark-blue);
   border-bottom: 2px solid var(--yellow-accent);
@@ -112,7 +119,26 @@ body {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  /* transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%); */
 }
+
+/* .bg-img:hover {
+  filter: brightness(100%);
+  transform: scale(3);
+} */
+
+/* .img-hover-zoom--slowmo img {
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+}
+
+.img-hover-zoom--slowmo:hover img {
+  filter: brightness(100%);
+  transform: scale(3);
+} */
 
 .banner__highlight,
 .banner_alert-one,
