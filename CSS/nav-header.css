@@ -770,7 +770,8 @@ body header .navigation .icons .input-open {
 
 body header .navigation .icons .input-open::placeholder {
   color: #858484;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 body header .navigation .icons .icons__search .anchor {
@@ -845,7 +846,7 @@ body .nav_white_text {
   color: var(--off-white);
   text-decoration: none !important;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   letter-spacing: 2px;
   background-color: transparent;
   cursor: pointer;
