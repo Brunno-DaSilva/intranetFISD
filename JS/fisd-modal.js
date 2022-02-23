@@ -4,22 +4,64 @@
 ========================================================================== 
 */
 
-const modal__main = document.getElementById("modal__main_ID");
-const modal__openButton = document.getElementById("modal__openButton_ID");
-const modal__closeButton = document.getElementById("modal__closeButton_ID");
+export function FISD_Modal(
+  modal__main_container_ID,
+  modal__openButton_ID,
+  modal__closeButton_ID
+) {
+  /* 
+======================================
+// Assign const Get el IDs
+====================================== 
+*/
 
-modal__openButton.onclick = function () {
-  modal__main.style.display = "block";
-};
+  const modal__main_container = document.getElementById(
+    `${modal__main_container_ID}`
+  );
+  const modal__openButton = document.getElementById(`${modal__openButton_ID}`);
+  const modal__closeButton = document.getElementById(
+    `${modal__closeButton_ID}`
+  );
 
-modal__closeButton.onclick = function () {
-  modal__main.style.display = "none";
-};
+  /* 
+======================================
+// Open and Close Modal func
+====================================== 
+*/
+  modal__openButton.onclick = function () {
+    modal__main_container.style.display = "block";
+  };
 
-window.onclick = function (event) {
-  if (event.target == modal__main) {
-    modal__main.style.display = "none";
-  }
-};
+  modal__closeButton.onclick = function () {
+    modal__main_container.style.display = "none";
+  };
 
-const FISD_Modal = (modal__main, modal__openButton, modal__closeButton) => {};
+  /* 
+======================================
+// Close if clicked outside of Modal 
+// area
+====================================== 
+*/
+  window.onclick = function (event) {
+    if (event.target == modal__main_container) {
+      modal__main_container.style.display = "none";
+    }
+  };
+}
+
+/* 
+==========================================================================
+// Expected HTML Structure
+========================================================================== 
+*/
+/*
+
+<button type="button" id="modal__open-button">Open</button>
+<div id="qlinks__modal">
+  <div>
+  <---! Content !-->
+  </div>
+  <button type="button" id="modal__close-button">Close</button>
+</div>
+
+*/
