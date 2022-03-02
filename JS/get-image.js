@@ -6,27 +6,26 @@ console.log("ICONS DATA: ", ICONS_DATA);
 
 function pushDataToHTML(ICONS_DATA) {
   app.innerHTML = ICONS_DATA.map((data) => {
-    return `
-<div class="articles__card">
-  <div class="articles__card-img">
-    <div class="svg_holder ${data.bg}">
-    <img src='${data.svg}' alt='${data.id}' />
+    return `<div class="articles__card">
+    <div class="articles__card-img">
+      <div class="svg_holder ${data.bg}">
+      <img src='${data.svg}' alt='${data.id}' />
+      </div>
     </div>
-  </div>
-  <div class="articles__card-title">
-    <h3>Community Facility Use and Rental</h3>
-  </div>
-  <div class="articles__card-text">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-      Officia hic cumque nobis distinctio.</p>
-  </div>
-  <div class="articles__card-btn">
-    <button>Read more</button>
-  </div>
-</div>
-`;
-  });
+    <div class="articles__card-title">
+      <h3>Community Facility Use and Rental</h3>
+    </div>
+    <div class="articles__card-text">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Officia hic cumque nobis distinctio.</p>
+    </div>
+    <div class="articles__card-btn">
+      <button>Read more</button>
+    </div>
+  </div>`;
+  }).join("");
 }
+
 pushDataToHTML(ICONS_DATA);
 
 /*********************************
