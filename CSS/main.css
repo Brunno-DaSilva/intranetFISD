@@ -850,11 +850,6 @@ body {
   color: hsl(190, 47%, 56%) !important;
 }
 
-.svg_holder-green img {
-  color: #5ab2c4 !important;
-  width: 180px;
-}
-
 .svg_holder-blue {
   background-color: hsl(207, 62%, 25%, 0.282);
   color: #184467 !important;
