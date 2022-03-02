@@ -60,13 +60,12 @@ export function getQuickLinks(QUICK_LINKS_DATA, EL_ID) {
 
   el_ID.innerHTML = QUICK_LINKS_DATA.map((data) => {
     return `
-     <div>
-        <li>
-            <img src="${data.svg}" alt="${data.title}" /> 
-            <a href="${data.url}">${data.title}</a>
-        </li>
-     </div> 
-      
+        <div>
+            <a href="${data.url}">
+                <img src="${data.svg}" alt="${data.title}" /> 
+                <span>${data.title}</span>
+            </a>
+        </div>      
       `;
-  });
+  }).join("");
 }
