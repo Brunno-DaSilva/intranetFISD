@@ -1,12 +1,16 @@
 import { getFooterDate } from "./footer.js";
 import { FISD_Modal } from "./fisd-modal.js";
+import { QUICK_LINKS_DATA, getQuickLinks } from "./quick-links.js";
 
 getFooterDate("getDate");
+
 FISD_Modal(
   "qlinks__modal",
   "qlinks__modal--button",
   "qlinks__modal--close-button"
 );
+
+getQuickLinks(QUICK_LINKS_DATA, "qlinks__links");
 
 const highlightImgBG = document.getElementById("banner__highlight_img");
 const alertOneImgBG = document.getElementById("banner__alert_one_img");
