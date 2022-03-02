@@ -1,4 +1,4 @@
-export const QUICKLINKS_DATA = [
+export const QUICK_LINKS_DATA = [
   {
     id: 1,
     url: "https://www.friscoisd.org/employment/current-openings",
@@ -55,4 +55,18 @@ export const QUICKLINKS_DATA = [
   },
 ];
 
-export function getQuickLinks() {}
+export function getQuickLinks(QUICK_LINKS_DATA, EL_ID) {
+  const el_ID = document.getElementById(`${EL_ID}`);
+
+  el_ID.innerHTML = QUICK_LINKS_DATA.map((data) => {
+    return `
+     <div>
+        <li>
+            <img src="${data.svg}" alt="${data.title}" /> 
+            <a href="${data.url}">${data.title}</a>
+        </li>
+     </div> 
+      
+      `;
+  });
+}
