@@ -2,16 +2,36 @@ import { getFooterDate } from "./footer.js";
 import { FISD_Modal } from "./fisd-modal.js";
 import { QUICK_LINKS_DATA, getQuickLinks } from "./quick-links.js";
 
+/* 
+==========================================================================
+  Get Footer Date 
+========================================================================== 
+*/
 getFooterDate("getDate");
 
+/* 
+==========================================================================
+  Get Modal 
+========================================================================== 
+*/
 FISD_Modal(
   "qlinks__modal",
   "qlinks__modal--button",
   "qlinks__modal--close-button"
 );
+/* 
+==========================================================================
+  Get QuickLinks data
+========================================================================== 
+*/
 
 getQuickLinks(QUICK_LINKS_DATA, "qlinks__links");
 
+/* 
+==========================================================================
+  Main Highlight Section Images 
+========================================================================== 
+*/
 const highlightImgBG = document.getElementById("banner__highlight_img");
 const alertOneImgBG = document.getElementById("banner__alert_one_img");
 const alertTwoImgBG = document.getElementById("banner__alert_two_img");
