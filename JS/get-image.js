@@ -2,7 +2,6 @@ import { ICONS_DATA } from "./icons-data.js";
 
 const app = document.querySelector("#random-img");
 const fetchedURL = `https://jsonplaceholder.typicode.com/users`;
-console.log("ICONS DATA: ", ICONS_DATA);
 
 function pushDataToHTML(ICONS_DATA) {
   app.innerHTML = ICONS_DATA.map((data) => {
