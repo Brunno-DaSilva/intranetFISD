@@ -834,7 +834,8 @@ body {
   align-items: center;
   margin-bottom: 2rem;
 }
-.svg_holder {
+.svg_holder,
+.svg_holder img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -842,10 +843,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .svg_holder-green {
   background-color: hsla(190, 47%, 56%, 0.282);
   color: hsl(190, 47%, 56%) !important;
 }
+
+.svg_holder-green img {
+  color: hsl(190, 47%, 56%) !important;
+  width: 180px;
+}
+
 .svg_holder-blue {
   background-color: hsl(207, 62%, 25%, 0.282);
   color: hsl(207, 62%, 25%) !important;
@@ -859,7 +867,8 @@ body {
   color: hsl(45, 94%, 41%) !important;
 }
 
-.articles__card-img svg {
+.articles__card-img svg,
+.articles__card-img img {
   width: 100px;
   height: 100px;
 }
