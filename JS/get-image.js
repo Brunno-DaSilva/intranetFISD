@@ -10,7 +10,7 @@ function pushDataToHTML(ICONS_DATA) {
 <div class="articles__card">
   <div class="articles__card-img">
     <div class="svg_holder svg_holder-green">
-    <img style="border-radius: 60%" src='${data.url}' alt='${data.id}' />
+    <img style="border-radius: 60%" src='${data.svg}' alt='${data.id}' />
     </div>
   </div>
   <div class="articles__card-title">
