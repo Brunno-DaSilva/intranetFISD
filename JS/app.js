@@ -1,5 +1,9 @@
 import { getFooterDate } from "./footer.js";
-import { FISD_Modal } from "./fisd-modal.js";
+/****************************************
+👇 Uncomment this if Modal is needed👇
+******************************************/
+// import { FISD_Modal } from "./fisd-modal.js";
+
 import { QUICK_LINKS_DATA, getQuickLinks } from "./quick-links.js";
 
 /* 
@@ -17,16 +21,23 @@ getFooterDate("getDate");
 
 getQuickLinks(QUICK_LINKS_DATA, "qlinks__links");
 
+/****************************************
+👇 Uncomment this if Modal is needed👇
+******************************************/
 /* 
 ==========================================================================
   Get Modal 
 ========================================================================== 
 */
-FISD_Modal(
-  "qlinks__modal",
-  "qlinks__modal--button",
-  "qlinks__modal--close-button"
-);
+// FISD_Modal(
+//   "qlinks__modal",
+//   "qlinks__modal--button",
+//   "qlinks__modal--close-button"
+// );
+
+/****************************************
+👆 Uncomment this if Modal is needed👆
+******************************************/
 
 /* 
 ==========================================================================
