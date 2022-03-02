@@ -223,26 +223,53 @@ body {
 }
 
 .qlinks__links {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ql_anchor__container,
+.ql-anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ql-anchor {
+  justify-content: flex-start;
+  transition: var(--transition);
+}
+.ql-anchor:hover {
+  cursor: pointer;
+  color: var(--yellow-accent);
+}
+.ql-anchor span {
+  margin-left: 0.5rem;
+}
+
+.qlinks__links-item {
+  width: 90%;
   display: grid;
+  row-gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1.1fr 1.1fr 1.1fr;
 }
-.qlinks__links-item {
+
+.qlinks__links-modal {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0.5rem 0;
 }
 .qlinks__links-item:last-child p {
   color: var(--orange-accent);
 }
 
-.qlinks__links-item p {
+.qlinks__links-item p,
+.qlinks__links-item div a {
   width: 90%; /*This makes both the icons and text align*/
   text-transform: uppercase;
   text-align: left;
   font-size: 0.8rem;
   color: var(--foreground);
   transition: var(--transition);
+  text-decoration: none;
 }
 
 .qlinks__links-item p:hover {

@@ -53,6 +53,12 @@ export const QUICK_LINKS_DATA = [
     title: "Employee Access Center",
     svg: "../img/icons/pig.svg",
   },
+  {
+    id: 10,
+    url: "https://efinanceedge.friscoisd.org/eFP5.2/EmployeeAccessCenter/Web/EmployeeInfo.aspx",
+    title: "Facebook",
+    svg: "../img/icons/brand-facebook.svg",
+  },
 ];
 
 export function getQuickLinks(QUICK_LINKS_DATA, EL_ID) {
@@ -60,9 +66,9 @@ export function getQuickLinks(QUICK_LINKS_DATA, EL_ID) {
 
   el_ID.innerHTML = QUICK_LINKS_DATA.map((data) => {
     return `
-        <div>
-            <a href="${data.url}">
-                <img src="${data.svg}" alt="${data.title}" /> 
+        <div class="ql_anchor__container">
+            <a  class="ql-anchor" href="${data.url}">
+                <img style="width: 40px"src="${data.svg}" alt="${data.title}" /> 
                 <span>${data.title}</span>
             </a>
         </div>      
