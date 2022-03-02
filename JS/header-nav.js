@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         searchTermsArr.push(...data);
-        console.log(searchTermsArr);
         init();
       })
       .catch((error) => {
