@@ -805,6 +805,7 @@ body {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
@@ -850,17 +851,17 @@ body {
 }
 
 .svg_holder-green img {
-  color: hsl(190, 47%, 56%) !important;
+  color: #5ab2c4 !important;
   width: 180px;
 }
 
 .svg_holder-blue {
   background-color: hsl(207, 62%, 25%, 0.282);
-  color: hsl(207, 62%, 25%) !important;
+  color: #184467 !important;
 }
 .svg_holder-orange {
   background-color: hsl(12, 80%, 56%, 0.282);
-  color: hsl(12, 80%, 56%) !important;
+  color: #e95935 !important;
 }
 .svg_holder-yellow {
   background-color: hsl(45, 88%, 48%, 0.282);

@@ -20,7 +20,7 @@ export const ICONS_DATA = [
   {
     id: 4,
     url: "https://res.cloudinary.com/duprwuo4j/image/upload/c_scale,w_250/v1645637854/starwarsBG/BB8.jpg",
-    svg: "../img/icons/at.svg",
+    svg: "../img/icons/school.svg",
     bg: "svg_holder-orange",
   },
   {
