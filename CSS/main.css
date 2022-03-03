@@ -677,12 +677,13 @@ body {
 
 .caption__img-wrapper {
   border-radius: var(--radius);
+  max-width: 500px;
+  height: 500px;
 }
 .caption__img {
-  width: 100%;
-  height: auto;
+  max-width: 500px;
+  min-height: 500px;
   margin: 2px;
-  max-width: 400px;
   border-radius: var(--radius);
 }
 
