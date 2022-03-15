@@ -1,10 +1,11 @@
 import { ICONS_DATA } from "./icons-data.js";
 
-const app = document.querySelector("#random-img");
+const articles__card = document.querySelector("#article__cards");
+const news__card = document.querySelector("#news__cards");
 const fetchedURL = `https://jsonplaceholder.typicode.com/users`;
 
-function pushDataToHTML(ICONS_DATA) {
-  app.innerHTML = ICONS_DATA.map((data) => {
+function pushDataToHTML(ICONS_DATA, el) {
+  el.innerHTML = ICONS_DATA.map((data) => {
     return `<div class="articles__card">
     <div class="articles__card-img">
       <div class="svg_holder ${data.bg}">
@@ -25,7 +26,8 @@ function pushDataToHTML(ICONS_DATA) {
   }).join("");
 }
 
-pushDataToHTML(ICONS_DATA);
+pushDataToHTML(ICONS_DATA, articles__card);
+pushDataToHTML(ICONS_DATA, news__card);
 
 /*********************************
 Fetch version
