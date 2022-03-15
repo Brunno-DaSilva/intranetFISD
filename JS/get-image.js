@@ -2,7 +2,7 @@ import { ICONS_DATA } from "./icons-data.js";
 
 const articles__card = document.querySelector("#article__cards");
 const news__card = document.querySelector("#news__cards");
-const fetchedURL = `https://jsonplaceholder.typicode.com/users`;
+// const fetchedURL = `https://jsonplaceholder.typicode.com/users`;
 
 function pushDataToHTML(ICONS_DATA, el) {
   el.innerHTML = ICONS_DATA.map((data) => {
