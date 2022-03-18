@@ -27,7 +27,27 @@ function pushDataToHTML(ICONS_DATA, el) {
 }
 
 pushDataToHTML(ICONS_DATA, articles__card);
-pushDataToHTML(ICONS_DATA, news__card);
+
+function pushDataToHTML2(ICONS_DATA, el) {
+  el.innerHTML = ICONS_DATA.map((data) => {
+    return `<div class="articles__card">
+    <div class="articles__card-img">
+      <div class="svg_holder ${data.bg}">
+      <img src='${data.svg}' alt='${data.id}' />
+      </div>
+    </div>
+    <div class="articles__card-title">
+      <h3>Community Facility Use and Rental</h3>
+    </div>
+    <div class="articles__card-text">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Officia hic cumque nobis distinctio.</p>
+    </div>
+  </div>`;
+  }).join("");
+}
+
+pushDataToHTML2(ICONS_DATA, news__card);
 
 /*********************************
 Fetch version
