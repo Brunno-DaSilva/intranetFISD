@@ -2,7 +2,7 @@ import { ICONS_DATA } from "./icons-data.js";
 
 const articles__card = document.querySelector("#article__cards");
 const news__card = document.querySelector("#news__cards");
-// const fetchedURL = `https://jsonplaceholder.typicode.com/users`;
+const fetchedURL = `https://res.friscoisd.org/services/Google/calendar?campus=fhs&eventCount=500&calType=year&pow=false`;
 
 function pushDataToHTML(ICONS_DATA, el) {
   el.innerHTML = ICONS_DATA.map((data) => {
