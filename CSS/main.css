@@ -506,8 +506,8 @@ body {
   min-height: 30vh;
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
-  gap: 2rem;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  gap: 1rem;
 }
 
 .calendar__date-card {
@@ -582,15 +582,17 @@ body {
   width: 100%;
 }
 
-.calendar__date-card-button button {
+.calendar__date-card-button button,
+.calendar__date-card-button a {
   background-color: transparent;
   font-size: 18px;
   color: #072136;
   transition: var(--transition);
+  text-decoration: none !important;
 }
-.calendar__date-card-button button:hover {
+.calendar__date-card-button button:hover,
+.calendar__date-card-button a:hover {
   background-color: transparent;
-  font-size: 18px;
   color: var(--yellow-accent);
   cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import { getFooterDate } from "./footer.js";
 /****************************************
-👇 Uncomment this if Modal is needed👇
+👇 Uncomment this if Modal is needed 👇
 ******************************************/
 // import { FISD_Modal } from "./fisd-modal.js";
 
